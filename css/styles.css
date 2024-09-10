@@ -1,0 +1,34 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    position: relative; /* 新增，用于相对定位 */
+    height: 100%;
+}
+
+canvas {
+    position: absolute; /* 新增，用于绝对定位 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* 新增，确保canvas在图片下方 */
+}
+
+.image-container {
+    position: absolute; /* 新增，用于绝对定位 */
+    top: 20px; /* 根据需要调整图片与顶部的距离 */
+    left: 50%;
+    transform: translateX(-50%); /* 用于居中图片 */
+    width: 200px; /* 根据需要调整图片大小 */
+    height: 200px; /* 高度与宽度相同以保持圆形 */
+    z-index: 10; /* 新增，确保图片在canvas上方 */
+}
+
+.rounded-image {
+    width: 100%; /* 使图片宽度占满容器 */
+    height: auto; /* 高度自适应 */
+    border-radius: 50%; /* 裁剪为圆形 */
+    border: 4px solid white; /* 添加白色描边 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 可选：添加阴影效果 */
+}
