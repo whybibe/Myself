@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('fonts/KurewaGothicCjkTc-Light-2.ttf') format('truetype');
+}
+
 html, body {
     padding: 0;
     margin: 0;
@@ -31,4 +36,21 @@ canvas {
     border-radius: 50%; /* 裁剪为圆形 */
     border: 4px solid white; /* 添加白色描边 */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 可选：添加阴影效果 */
+}
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    font-family: 'MyCustomFont', sans-serif;
+    color: white;
+    z-index: 20;
+}
+
+.title-text {
+    font-size: 3vw;
+    margin-top: 5vw;
 }

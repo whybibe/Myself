@@ -9,7 +9,7 @@ const arr = Array(Math.ceil(canvas.width / 10)).fill(0);
 const str = "01010101010101010101010101010110101010101010101010101010101010".split("");
 
 // 根据画布宽度动态设置字体大小
-const fontSize = canvas.width / 100; // 假设我们想要字体大小是画布宽度的1/100
+const fontSize = canvas.width / 100; 
 ctx.font = `${fontSize}px 优设标题黑`;
 
 function rain() {
