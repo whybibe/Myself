@@ -1,6 +1,8 @@
 @font-face {
-    font-family: 'MyCustomFont';
-    src: url('fonts/KurewaGothicCjkTc-Light-2.ttf') format('truetype');
+    font-family: 'MyFont';
+    src: url('fonts/SanafonMugi.ttf');
+    font-style: normal;
+    font-weight: normal;
 }
 
 html, body {
@@ -45,7 +47,7 @@ canvas {
     transform: translate(-50%, -50%);
     width: 100%;
     text-align: center;
-    font-family: 'MyCustomFont', sans-serif;
+    font-family: 'MyFont', sans-serif;
     color: white;
     z-index: 20;
 }
