@@ -24,3 +24,38 @@ function rain() {
 }
 
 setInterval(rain, 30);
+
+document.addEventListener('DOMContentLoaded', function() {
+  const thumbnails = document.querySelectorAll('.thumbnail');
+  const mainImage = document.querySelector('.main-image');
+  const fullscreenImageContainer = document.querySelector('.fullscreen-image-container');
+  const fullscreenImage = document.querySelector('.fullscreen-image');
+  const closeBtn = document.querySelector('.close-btn');
+  let currentIndex = 0;
+
+  thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener('click', function() {
+      mainImage.src = this.getAttribute('data-full-image');
+      currentIndex = index;
+    });
+  });
+
+  document.querySelector('.left-arrow').addEventListener('click', function() {
+    currentIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
+    mainImage.src = thumbnails[currentIndex].getAttribute('data-full-image');
+  });
+
+  document.querySelector('.right-arrow').addEventListener('click', function() {
+    currentIndex = (currentIndex + 1) % thumbnails.length;
+    mainImage.src = thumbnails[currentIndex].getAttribute('data-full-image');
+  });
+
+  mainImage.addEventListener('click', function() {
+    fullscreenImage.src = mainImage.src;
+    fullscreenImageContainer.style.display = 'block';
+  });
+
+  closeBtn.addEventListener('click', function() {
+    fullscreenImageContainer.style.display = 'none';
+  });
+});
