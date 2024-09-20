@@ -8,7 +8,7 @@
 html, body {
     padding: 0;
     margin: 0;
-    overflow: hidden;
+    overflow: visible;
     position: relative; /* 新增，用于相对定位 */
     height: 100%;
 }
@@ -18,7 +18,7 @@ canvas {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     z-index: -1; /* 新增，确保canvas在图片下方 */
 }
 
